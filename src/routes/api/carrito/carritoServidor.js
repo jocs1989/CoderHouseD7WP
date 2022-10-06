@@ -4,9 +4,9 @@ import   express  from'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const _dirname = path.dirname(_filename);
 
-const router = Router(); 
+const router = Router();
 const carrito = new Carrito();
 const datosAgregados={};
 
@@ -18,14 +18,14 @@ router.use(express.json());
 router.post("/",async (req, res) => {
 
   try {
-          
+
           const id =req.body.id;
           const cantidad=req.body.cantidad;
-         
+
         const valores = await carrito.setAddCarAsync(id,cantidad)
 
-    res.status(200).json(valores); 
-    
+    res.status(200).json(valores);
+
 
     //res.status(200).render('partials/producto',{articulo: await articulos.save(producto)})
 
@@ -49,11 +49,11 @@ router.delete("/:id", async (req, res) => {
 
 
 //GET '/api/productos/:id' -> devuelve un producto según su id.
-router.get("/:id", async (req, res) => {
+router.get("/:id/productos", async (req, res) => {
   try {
     const { id } = req.params;
-   
-    //let result = await articulos.getById(id);
+
+    let result = await carrito.getAllCar(id);
     if (result === null) {
       throw new Error("No Existe el producto");
     } else {
@@ -74,7 +74,7 @@ router.get("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const producto = req.body;
-    producto.id = req.params.id;    
+    producto.id = req.params.id;
     res.status(200).json(await articulos.updateById(producto));
   } catch (err) {
     console.error( err);

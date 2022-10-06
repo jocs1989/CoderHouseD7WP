@@ -29,10 +29,10 @@ class Contenedora {
       this.busqueda = this.datos.find((object) => {
         if (object.id == producto.id) {
           object.id = Number(producto.id);
-          object.timestamp=Date.now();
+          object.timestamp = Date.now();
           object.nombre = producto.nombre;
-          object.descripcion=producto.descripcion;
-          object.codigo=producto.codigo;
+          object.descripcion = producto.descripcion;
+          object.codigo = producto.codigo;
           object.url = producto.url;
           object.precio = Number(producto.precio);
           object.stock = Number(producto.stock);
@@ -56,6 +56,7 @@ class Contenedora {
     try {
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
+      console.log(this.datos);
       this.busqueda = this.datos.find((object) => {
         if (object.id == id) {
           return object;
@@ -63,7 +64,7 @@ class Contenedora {
       });
       console.log(this.busqueda === undefined ? null : this.busqueda);
 
-      return this.busqueda === undefined ? null : this.busqueda;
+      return this.busqueda === undefined ? null : this.busqueda[id];
     } catch (err) {
       console.log(err);
       throw new Error(err);
@@ -125,34 +126,27 @@ class Contenedora {
     try {
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
-      let sinEliminar = this.datos.map((object) => {
-        if (id != object.id ) {
-          
+      let sinEliminar = this.datos.filter((object) => {
+        if (id !== object.id) {
           return object;
-                  }
+        }
       });
-      let final= sinEliminar.map((object) => {
-        if (null != object ) {
-          
-          return object;
-                  }
-      })
 
       let eliminado = this.datos.filter((object) => {
         if (id == object.id) {
           return object;
         }
       });
-        
+
       if (eliminado === undefined) {
         console.log("No existe es id");
       } else {
         //await fs.promises.writeFile(this.nombre,JSON.stringify(eliminado,null,2))
-        writeFileSync(this.nombre, JSON.stringify(final, null, 2));
+        writeFileSync(this.nombre, JSON.stringify(sinEliminar, null, 2));
         console.log(
           `Eliminando...  id:${eliminado[0].id}::${eliminado[0].nombre}`
         );
-        return eliminado[0]
+        return eliminado[0];
       }
     } catch (err) {
       throw new Error(err);
