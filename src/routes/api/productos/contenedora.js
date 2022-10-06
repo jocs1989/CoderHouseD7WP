@@ -42,30 +42,28 @@ class Contenedora {
       });
       console.log(
         `se acualizo el id:${this.busqueda.id} ::${this.busqueda.title}`
-      );
-      console.log(this.datos);
+      );    
       writeFileSync(this.nombre, JSON.stringify(this.datos, null, 2));
-
       return this.busqueda;
-    } catch (err) {
-      console.log(err);
+    } catch (err) {     
       throw new Error(err);
     }
   }
   async getById(id) {
     try {
+      console.log('papap'+id)
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
       this.busqueda = this.datos.find((object) => {
-        if (object.id == id) {
+        
+        if (Number(object.id) === id) {
           return object;
         }
       });
-      console.log(this.busqueda === undefined ? null : this.busqueda);
+     
 
       return this.busqueda === undefined ? null : this.busqueda;
-    } catch (err) {
-      console.log(err);
+    } catch (err) {      
       throw new Error(err);
     }
   }
@@ -73,8 +71,6 @@ class Contenedora {
   idValidRandom(datos, key) {
     try {
       let i = Math.ceil(Math.random() * key);
-      console.log("i=" + i);
-
       let valid = datos.filter((object) => {
         if (object.id === i) {
           return object;
@@ -97,7 +93,6 @@ class Contenedora {
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
       let key = this.datos[0].id;
-
       this.datos.find((object) => {
         if (key <= object.id) {
           key = object.id;
@@ -109,7 +104,7 @@ class Contenedora {
       console.log(this.Random);
       return this.Random;
     } catch (err) {
-      console.log("El archivo esta vacio");
+   
       throw new Error(err);
     }
   }
@@ -118,7 +113,7 @@ class Contenedora {
     let content = readFileSync(this.nombre, "utf8");
     this.dataTxt = [...JSON.parse(content)];
     return this.dataTxt;
-    console.log(this.dataTxt);
+  
   } // end  getAll
 
   async deleteById(id) {
@@ -155,7 +150,7 @@ class Contenedora {
   deleteAll() {
     try {
       writeFileSync(this.nombre, "[]", null, 2);
-      console.log("Elementos Eliminados");
+   
     } catch (err) {
       console.error(err);
       return err;

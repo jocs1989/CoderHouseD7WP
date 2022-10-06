@@ -1,4 +1,5 @@
 import Carrito from "../carrito/carrito.js";
+import Contenedora from "../productos/contenedora.js";
 import { Router } from "express";
 import express from "express";
 import { fileURLToPath } from "url";
@@ -7,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const router = Router();
 const carrito = new Carrito();
+const articulos = new Contenedora(__dirname+'../productos/articulos.txt')
 const datosAgregados = {};
 
 //GET '/api/productos' -> devuelve todos los productos.
@@ -16,11 +18,8 @@ router.post("/", async (req, res) => {
   try {
     const id = req.body.id;
     const cantidad = req.body.cantidad;
-
-    const valores = await carrito.setAddCarAsync(id, cantidad);
-
+    const valores = await carrito.setNewCar(id, cantidad);
     res.status(200).json(valores);
-
     //res.status(200).render('partials/producto',{articulo: await articulos.save(producto)})
   } catch (err) {
     console.error(err);
@@ -41,8 +40,7 @@ router.delete("/:id", async (req, res) => {
 //GET '/api/productos/:id' -> devuelve un producto según su id.
 router.get("/:id/productos", async (req, res) => {
   try {
-    const { id } = req.params;
-
+    const { id } = req.params;   
     let result = await carrito.getAllCar(id);
     if (result === null) {
       throw new Error("No Existe el producto");
@@ -68,4 +66,18 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+router.put("/:id/productos", async (req, res) => {
+  try {
+    
+    const idCarrito= req.params.id;
+    const idArticulo=req.body.idArticulo;
+    const cantidad=req.body.cantidad;
+    console.log('aaa'+idArticulo);
+    const producto= await carrito.setAddProductCar(idCarrito,idArticulo, cantidad);
+    res.status(200).json(producto);
+  } catch (err) {
+    console.error(err);
+    res.status(400).send({ error: "datos incorrectos" });
+  }
+});
 export default router;
