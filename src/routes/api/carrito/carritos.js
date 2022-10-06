@@ -13,7 +13,7 @@ class Contenedora {
       object.id = Number(await this.datos[this.datos.length - 1].id) + 1;
       this.datos.push(object);
       writeFileSync(this.nombre, JSON.stringify(this.datos, null, 2));
-      return this.datos[this.datos.length - 1];
+      return object.id;
     } catch (err) {
       object.id = 1;
 
@@ -125,24 +125,32 @@ class Contenedora {
     try {
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
-      let sinEliminar = this.datos.filter((object) => {
-        if (id != object.id) {
+      let sinEliminar = this.datos.map((object) => {
+        if (id != object.id ) {
+          
           return object;
-        }
+                  }
       });
+      let final= sinEliminar.map((object) => {
+        if (null != object ) {
+          
+          return object;
+                  }
+      })
+
       let eliminado = this.datos.filter((object) => {
         if (id == object.id) {
           return object;
         }
       });
-
+        
       if (eliminado === undefined) {
         console.log("No existe es id");
       } else {
         //await fs.promises.writeFile(this.nombre,JSON.stringify(eliminado,null,2))
-        writeFileSync(this.nombre, JSON.stringify(sinEliminar, null, 2));
+        writeFileSync(this.nombre, JSON.stringify(final, null, 2));
         console.log(
-          `Eliminando...  id:${eliminado[0].id}::${eliminado[0].title}`
+          `Eliminando...  id:${eliminado[0].id}::${eliminado[0].nombre}`
         );
         return eliminado[0]
       }

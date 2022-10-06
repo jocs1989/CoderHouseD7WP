@@ -1,3 +1,4 @@
+import Carrito from "./routes/api/carrito/carritoServidor.js";
 import Filtro from "./filtro.js";
 import { Server as HttpServer } from "http";
 import { Server as IOServer } from "socket.io";
@@ -7,8 +8,8 @@ import express from "express";
 const app = express();
 //Seccion de use
 app.use(express.json());
-
-app.use("/productos/", Productos);
+app.use("/api/productos/", Productos);
+app.use("/api/carrito/", Carrito);
 app.use("*", Filtro);
 
 

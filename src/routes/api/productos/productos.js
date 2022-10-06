@@ -10,9 +10,19 @@ const router = Router();
 const articulos = new Contenedora(__dirname+'/articulos.txt');
 const datosAgregados={};
 
+function isAdmin(req, res, next) {
+  if (req.body.administrador) {
+    next();
+  } else {
+    res.status(403).json({
+      error: `-1,descripcion:  ruta ${req.url} método ${req.method}  no autorizada`,
+    });
+  }
+}
 
 //GET '/api/productos' -> devuelve todos los productos.
 router.use(express.json());
+
 router.get("/", async (req, res) => {
   try {
     const respuesta = await articulos.getAll();
@@ -46,14 +56,16 @@ router.get("/:id", async (req, res) => {
 
 
 
-router.post("/", async (req, res) => {
+router.post("/", isAdmin,async (req, res) => {
 
   try {
-    const title=req.body.title;
-    const price=req.body.price;
-    const thumbnail=req.body.thumbnail;
-
-    const producto = {title,price,thumbnail} ; 
+    const nombre=req.body.nombre;
+    const descripcion=req.body.precio;
+    const codigo=req.body.codigo;
+    const url=req.body.url;
+    const precio=req.body.precio;
+    const stock=req.body.stock;  
+    const producto = {nombre,descripcion,codigo,url,precio,stock} ; 
     console.log(producto)  
     const valores = await articulos.save(producto)
    
@@ -72,7 +84,7 @@ router.post("/", async (req, res) => {
 });
 
 //PUT '/api/productos/:id' -> recibe y actualiza un producto según su id.
-router.put("/:id", async (req, res) => {
+router.put("/:id",isAdmin, async (req, res) => {
   try {
     const producto = req.body;
     producto.id = req.params.id;    
@@ -84,7 +96,7 @@ router.put("/:id", async (req, res) => {
 });
 
 //DELETE '/api/productos/:id' -> elimina un producto según su id.
-router.delete("/:id", async (req, res) => {
+router.delete("/:id",isAdmin, async (req, res) => {
   try {
     res.status(200).json(await articulos.deleteById(req.params.id));
   } catch (err) {
