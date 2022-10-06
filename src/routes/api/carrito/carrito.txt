@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "1": {
+      "nombre": "Regla",
+      "descripcion": 125.53,
+      "codigo": 25233,
+      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+      "precio": 125.53,
+      "stock": 970,
+      "id": 2,
+      "timestamp": 1665090618274,
+      "cantidad": 30
+    },
+    "id": 2
+  }
+]

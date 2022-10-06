@@ -54,6 +54,16 @@ setDellCar() {
 }
 async setDellCarById(id) {
   const elementoEliminado=await this.carritos.deleteById(id);
+  for (let i in elementoEliminado){
+    if(i!=='id'){
+      let articuloViejo=await this.articulos.getById(i)
+      let stockviejo=articuloViejo.stock+elementoEliminado[i].cantidad
+      articuloViejo.stock=stockviejo
+      await this.articulos.updateById(articuloViejo)
+    }
+    
+
+  }
   delete this.contenedor[id];
   console.log(elementoEliminado);
 }
