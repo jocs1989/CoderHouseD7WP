@@ -17,12 +17,22 @@ class Carrito {                               constructor() {
 }
 async setNewCar(id, cantidad) {
   try {
+   
+    const todoProductos= await this.carritos.getAll();
+    let idAsignado=0
+    
+    if (Number(todoProductos.length)===0){
+     idAsignado=1;
+
+    }else{
+      idAsignado=Number(todoProductos.length)+1
+    }
     
     const object = await this.articulos.getById(id);
     const precio = Number(object.precio);
     const stock = Number(object.stock);
 
-    console.log(cantidad)
+ 
 
     if (Number(object.stock) >= cantidad) {
 
@@ -41,9 +51,12 @@ async setNewCar(id, cantidad) {
       }
       
       this.productos++;
+     
+      this.contenedor.id=idAsignado;
+      
       console.log(this.contenedor);
-    
-      return await this.carritos.save(this.contenedor);
+      todoProductos.push(this.contenedor)
+      return await this.carritos.save(todoProductos);
     } else {
       console.log("lo sentimos no hay stock");
     }
@@ -107,6 +120,52 @@ async setAddProductCar(idCarrito,idArticulo, cantidad) {
     console.log(err);
   }
 }
+async setDellProductCar(idCarrito,idArticulo) {
+  try {
+    const todoProductos= await this.carritos.getAll();
+    const object = await this.articulos.getById(idArticulo);    
+    const precio = Number(object.precio);    
+    const stock = Number(object.stock);
+    const carritoViejo=await this.getAllCar(idCarrito);
+    const cantidad=carritoViejo[idArticulo].cantidad
+    
+      this.total = this.total - cantidad * precio;
+      object.stock = stock + cantidad;
+      await this.articulos.updateById(object);      
+      object.cantidad = cantidad;
+      if (carritoViejo[object.id] !== undefined) {       
+       
+
+        
+        delete carritoViejo[Number(object.id)] 
+      }      
+      this.productos++;
+      //this.contenedor.id=idCarrito      
+    
+      for (let i in todoProductos){
+       
+          if(Number(todoProductos[i].id)===Number(idCarrito))
+          {
+            carritoViejo.id=Number(idCarrito)
+            todoProductos[i]=carritoViejo
+            console.log(todoProductos[i])
+          }
+        
+        
+          
+        
+      }
+        
+     
+
+      this.carritos.saveAdd(todoProductos);      
+      return carritoViejo
+    
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 
 
 setDellCar() {
@@ -122,7 +181,7 @@ async setDellCarById(id) {
       let articuloViejo=await this.articulos.getById(i)
       let stockviejo=articuloViejo.stock+elementoEliminado[i].cantidad
       articuloViejo.stock=stockviejo
-      await this.articulos.updateById(articuloViejo)
+      return await this.articulos.updateById(articuloViejo)
     }
     
 

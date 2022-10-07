@@ -56,17 +56,6 @@ router.get("/:id/productos", async (req, res) => {
   //
 });
 
-//PUT '/api/productos/:id' -> recibe y actualiza un producto según su id.
-router.put("/:id", async (req, res) => {
-  try {
-    const producto = req.body;
-    producto.id = req.params.id;
-    res.status(200).json(await articulos.updateById(producto));
-  } catch (err) {
-    console.error(err);
-    res.status(400).send({ error: "datos incorrectos" });
-  }
-});
 
 router.post("/:id/productos", async (req, res) => {
   try {
@@ -82,4 +71,20 @@ router.post("/:id/productos", async (req, res) => {
     res.status(400).send({ error: "datos incorrectos" });
   }
 });
+router.delete("/:id/productos/:id_prod", async (req, res) => {
+  try {
+    
+    const idCarrito= req.params.id;
+    const idArticulo=req.params.id_prod;
+    
+    
+    const producto= await carrito.setDellProductCar(idCarrito,idArticulo);
+    res.status(200).json(producto);
+  } catch (err) {
+    console.error(err);
+    res.status(400).send({ error: "datos incorrectos" });
+  }
+});
+
+
 export default router;

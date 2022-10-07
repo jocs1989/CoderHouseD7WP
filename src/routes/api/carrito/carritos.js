@@ -8,22 +8,21 @@ class Contenedora {
 
   async save(object) {
     try {
-      const archivo = await fsPromises.readFile(this.nombre, "utf-8");
-      this.datos = [...JSON.parse(archivo)];
-      object.id = Number(await this.datos[this.datos.length - 1].id) + 1;
-      this.datos.push(object);
-      writeFileSync(this.nombre, JSON.stringify(this.datos, null, 2));
-      return object.id;
-    } catch (err) {
-      object.id = 1;
-      writeFileSync(this.nombre, JSON.stringify([object], null, 2));
+      
+      
+     
+      writeFileSync(this.nombre, JSON.stringify(object, null, 2));
+      
       return object;
+    } catch (err) {
+      
+      writeFileSync(this.nombre, JSON.stringify([], null, 2));
+      return [];
     }
   }
   async saveAdd(datos) {
     try {
       
-      console.log('Entro')
       
       writeFileSync(this.nombre, JSON.stringify(datos, null, 2));
       
@@ -112,9 +111,14 @@ class Contenedora {
   }
 
   getAll() {
+    try {
     let content = readFileSync(this.nombre, "utf8");
     this.dataTxt = [...JSON.parse(content)];
     return this.dataTxt;
+  } catch (err) {
+    return []
+    //console.log(err)
+  }
   } // end  getAll
 
   async deleteById(id) {
