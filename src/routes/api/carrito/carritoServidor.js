@@ -31,8 +31,8 @@ router.post("/", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   try {
-    const respuesta = await carrito.setDellCarById(Number(req.params.id));
-    res.status(200).json(respuesta);
+    await carrito.setDellCarById(Number(req.params.id));
+    res.status(200).json({});
   } catch (err) {
     console.error(err);
     res.status(400).json({ error: "datos incorrectos" });

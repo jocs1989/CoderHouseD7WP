@@ -17,6 +17,9 @@ class Carrito {                               constructor() {
 }
 async setNewCar(id, cantidad) {
   try {
+    this.productos = 0;
+    this.contenedor = {};
+    this.total = 0;
    
     const todoProductos= await this.carritos.getAll();
     let idAsignado=0
