@@ -6,37 +6,110 @@
       "codigo": 25233,
       "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
       "precio": 125.53,
-      "stock": 970,
+      "stock": 49880,
       "id": 1,
-      "timestamp": 1665090618274,
-      "cantidad": 30
+      "timestamp": 1665106536274,
+      "cantidad": 40
+    },
+    "id": 1
+  },
+  {
+    "1": {
+      "nombre": "Regla",
+      "descripcion": 125.53,
+      "codigo": 25233,
+      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+      "precio": 125.53,
+      "stock": 49860,
+      "id": 1,
+      "timestamp": 1665106657282,
+      "cantidad": 40
     },
     "id": 2
   },
   {
-    "2": {
-      "nombre": "Escuadra",
+    "1": {
+      "nombre": "Regla",
       "descripcion": 125.53,
       "codigo": 25233,
       "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
       "precio": 125.53,
-      "stock": 730,
-      "id": 2,
-      "timestamp": 1665090752514,
-      "cantidad": 300
-    },
-    "3": {
-      "nombre": "Escuadra",
-      "descripcion": 125.53,
-      "codigo": 25233,
-      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-      "precio": 125.53,
-      "stock": 730,
-      "id": 3,
-      "timestamp": 1665090752514,
-      "cantidad": 300
+      "stock": 49840,
+      "id": 1,
+      "timestamp": 1665106660191,
+      "cantidad": 40
     },
     "id": 3
+  },
+  {
+    "1": {
+      "nombre": "Regla",
+      "descripcion": 125.53,
+      "codigo": 25233,
+      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+      "precio": 125.53,
+      "stock": 49820,
+      "id": 1,
+      "timestamp": 1665106660936,
+      "cantidad": 40
+    },
+    "id": 4
+  },
+  {
+    "1": {
+      "nombre": "Regla",
+      "descripcion": 125.53,
+      "codigo": 25233,
+      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+      "precio": 125.53,
+      "stock": 49800,
+      "id": 1,
+      "timestamp": 1665106661659,
+      "cantidad": 40
+    },
+    "id": 5
+  },
+  {
+    "1": {
+      "nombre": "Regla",
+      "descripcion": 125.53,
+      "codigo": 25233,
+      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+      "precio": 125.53,
+      "stock": 49780,
+      "id": 1,
+      "timestamp": 1665106662336,
+      "cantidad": 40
+    },
+    "id": 6
+  },
+  {
+    "1": {
+      "nombre": "Regla",
+      "descripcion": 125.53,
+      "codigo": 25233,
+      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+      "precio": 125.53,
+      "stock": 49760,
+      "id": 1,
+      "timestamp": 1665106662948,
+      "cantidad": 40
+    },
+    "id": 7
+  },
+  {
+    "1": {
+      "nombre": "Regla",
+      "descripcion": 125.53,
+      "codigo": 25233,
+      "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+      "precio": 125.53,
+      "stock": 49740,
+      "id": 1,
+      "timestamp": 1665106663514,
+      "cantidad": 40
+    },
+    "id": 8
   },
   [
     {
@@ -46,37 +119,110 @@
         "codigo": 25233,
         "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
         "precio": 125.53,
-        "stock": 970,
+        "stock": 49880,
         "id": 1,
-        "timestamp": 1665090618274,
-        "cantidad": 30
+        "timestamp": 1665106536274,
+        "cantidad": 40
+      },
+      "id": 1
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49860,
+        "id": 1,
+        "timestamp": 1665106657282,
+        "cantidad": 40
       },
       "id": 2
     },
     {
-      "2": {
-        "nombre": "Escuadra",
+      "1": {
+        "nombre": "Regla",
         "descripcion": 125.53,
         "codigo": 25233,
         "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
         "precio": 125.53,
-        "stock": 730,
-        "id": 2,
-        "timestamp": 1665090752514,
-        "cantidad": 300
-      },
-      "3": {
-        "nombre": "Escuadra",
-        "descripcion": 125.53,
-        "codigo": 25233,
-        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-        "precio": 125.53,
-        "stock": 730,
-        "id": 3,
-        "timestamp": 1665090752514,
-        "cantidad": 300
+        "stock": 49840,
+        "id": 1,
+        "timestamp": 1665106660191,
+        "cantidad": 40
       },
       "id": 3
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49820,
+        "id": 1,
+        "timestamp": 1665106660936,
+        "cantidad": 40
+      },
+      "id": 4
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49800,
+        "id": 1,
+        "timestamp": 1665106661659,
+        "cantidad": 40
+      },
+      "id": 5
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49780,
+        "id": 1,
+        "timestamp": 1665106662336,
+        "cantidad": 40
+      },
+      "id": 6
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49760,
+        "id": 1,
+        "timestamp": 1665106662948,
+        "cantidad": 40
+      },
+      "id": 7
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49740,
+        "id": 1,
+        "timestamp": 1665106663514,
+        "cantidad": 40
+      },
+      "id": 8
     }
   ],
   [
@@ -87,81 +233,13 @@
         "codigo": 25233,
         "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
         "precio": 125.53,
-        "stock": 970,
+        "stock": 49880,
         "id": 1,
-        "timestamp": 1665090618274,
-        "cantidad": 30
+        "timestamp": 1665106536274,
+        "cantidad": 40
       },
-      "id": 2
+      "id": 1
     },
-    {
-      "2": {
-        "nombre": "Escuadra",
-        "descripcion": 125.53,
-        "codigo": 25233,
-        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-        "precio": 125.53,
-        "stock": 730,
-        "id": 2,
-        "timestamp": 1665090752514,
-        "cantidad": 300
-      },
-      "3": {
-        "nombre": "Escuadra",
-        "descripcion": 125.53,
-        "codigo": 25233,
-        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-        "precio": 125.53,
-        "stock": 730,
-        "id": 3,
-        "timestamp": 1665090752514,
-        "cantidad": 300
-      },
-      "id": 3
-    },
-    [
-      {
-        "1": {
-          "nombre": "Regla",
-          "descripcion": 125.53,
-          "codigo": 25233,
-          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-          "precio": 125.53,
-          "stock": 970,
-          "id": 1,
-          "timestamp": 1665090618274,
-          "cantidad": 30
-        },
-        "id": 2
-      },
-      {
-        "2": {
-          "nombre": "Escuadra",
-          "descripcion": 125.53,
-          "codigo": 25233,
-          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-          "precio": 125.53,
-          "stock": 730,
-          "id": 2,
-          "timestamp": 1665090752514,
-          "cantidad": 300
-        },
-        "3": {
-          "nombre": "Escuadra",
-          "descripcion": 125.53,
-          "codigo": 25233,
-          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-          "precio": 125.53,
-          "stock": 730,
-          "id": 3,
-          "timestamp": 1665090752514,
-          "cantidad": 300
-        },
-        "id": 3
-      }
-    ]
-  ],
-  [
     {
       "1": {
         "nombre": "Regla",
@@ -169,37 +247,96 @@
         "codigo": 25233,
         "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
         "precio": 125.53,
-        "stock": 970,
+        "stock": 49860,
         "id": 1,
-        "timestamp": 1665090618274,
-        "cantidad": 30
+        "timestamp": 1665106657282,
+        "cantidad": 40
       },
       "id": 2
     },
     {
-      "2": {
-        "nombre": "Escuadra",
+      "1": {
+        "nombre": "Regla",
         "descripcion": 125.53,
         "codigo": 25233,
         "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
         "precio": 125.53,
-        "stock": 730,
-        "id": 2,
-        "timestamp": 1665090752514,
-        "cantidad": 300
-      },
-      "3": {
-        "nombre": "Escuadra",
-        "descripcion": 125.53,
-        "codigo": 25233,
-        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-        "precio": 125.53,
-        "stock": 730,
-        "id": 3,
-        "timestamp": 1665090752514,
-        "cantidad": 300
+        "stock": 49840,
+        "id": 1,
+        "timestamp": 1665106660191,
+        "cantidad": 40
       },
       "id": 3
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49820,
+        "id": 1,
+        "timestamp": 1665106660936,
+        "cantidad": 40
+      },
+      "id": 4
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49800,
+        "id": 1,
+        "timestamp": 1665106661659,
+        "cantidad": 40
+      },
+      "id": 5
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49780,
+        "id": 1,
+        "timestamp": 1665106662336,
+        "cantidad": 40
+      },
+      "id": 6
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49760,
+        "id": 1,
+        "timestamp": 1665106662948,
+        "cantidad": 40
+      },
+      "id": 7
+    },
+    {
+      "1": {
+        "nombre": "Regla",
+        "descripcion": 125.53,
+        "codigo": 25233,
+        "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+        "precio": 125.53,
+        "stock": 49740,
+        "id": 1,
+        "timestamp": 1665106663514,
+        "cantidad": 40
+      },
+      "id": 8
     },
     [
       {
@@ -209,40 +346,13 @@
           "codigo": 25233,
           "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
           "precio": 125.53,
-          "stock": 970,
+          "stock": 49880,
           "id": 1,
-          "timestamp": 1665090618274,
-          "cantidad": 30
+          "timestamp": 1665106536274,
+          "cantidad": 40
         },
-        "id": 2
+        "id": 1
       },
-      {
-        "2": {
-          "nombre": "Escuadra",
-          "descripcion": 125.53,
-          "codigo": 25233,
-          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-          "precio": 125.53,
-          "stock": 730,
-          "id": 2,
-          "timestamp": 1665090752514,
-          "cantidad": 300
-        },
-        "3": {
-          "nombre": "Escuadra",
-          "descripcion": 125.53,
-          "codigo": 25233,
-          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-          "precio": 125.53,
-          "stock": 730,
-          "id": 3,
-          "timestamp": 1665090752514,
-          "cantidad": 300
-        },
-        "id": 3
-      }
-    ],
-    [
       {
         "1": {
           "nombre": "Regla",
@@ -250,79 +360,97 @@
           "codigo": 25233,
           "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
           "precio": 125.53,
-          "stock": 970,
+          "stock": 49860,
           "id": 1,
-          "timestamp": 1665090618274,
-          "cantidad": 30
+          "timestamp": 1665106657282,
+          "cantidad": 40
         },
         "id": 2
       },
       {
-        "2": {
-          "nombre": "Escuadra",
+        "1": {
+          "nombre": "Regla",
           "descripcion": 125.53,
           "codigo": 25233,
           "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
           "precio": 125.53,
-          "stock": 730,
-          "id": 2,
-          "timestamp": 1665090752514,
-          "cantidad": 300
-        },
-        "3": {
-          "nombre": "Escuadra",
-          "descripcion": 125.53,
-          "codigo": 25233,
-          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-          "precio": 125.53,
-          "stock": 730,
-          "id": 3,
-          "timestamp": 1665090752514,
-          "cantidad": 300
+          "stock": 49840,
+          "id": 1,
+          "timestamp": 1665106660191,
+          "cantidad": 40
         },
         "id": 3
       },
-      [
-        {
-          "1": {
-            "nombre": "Regla",
-            "descripcion": 125.53,
-            "codigo": 25233,
-            "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-            "precio": 125.53,
-            "stock": 970,
-            "id": 1,
-            "timestamp": 1665090618274,
-            "cantidad": 30
-          },
-          "id": 2
+      {
+        "1": {
+          "nombre": "Regla",
+          "descripcion": 125.53,
+          "codigo": 25233,
+          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+          "precio": 125.53,
+          "stock": 49820,
+          "id": 1,
+          "timestamp": 1665106660936,
+          "cantidad": 40
         },
-        {
-          "2": {
-            "nombre": "Escuadra",
-            "descripcion": 125.53,
-            "codigo": 25233,
-            "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-            "precio": 125.53,
-            "stock": 730,
-            "id": 2,
-            "timestamp": 1665090752514,
-            "cantidad": 300
-          },
-          "3": {
-            "nombre": "Escuadra",
-            "descripcion": 125.53,
-            "codigo": 25233,
-            "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
-            "precio": 125.53,
-            "stock": 730,
-            "id": 3,
-            "timestamp": 1665090752514,
-            "cantidad": 300
-          },
-          "id": 3
-        }
-      ]
+        "id": 4
+      },
+      {
+        "1": {
+          "nombre": "Regla",
+          "descripcion": 125.53,
+          "codigo": 25233,
+          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+          "precio": 125.53,
+          "stock": 49800,
+          "id": 1,
+          "timestamp": 1665106661659,
+          "cantidad": 40
+        },
+        "id": 5
+      },
+      {
+        "1": {
+          "nombre": "Regla",
+          "descripcion": 125.53,
+          "codigo": 25233,
+          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+          "precio": 125.53,
+          "stock": 49780,
+          "id": 1,
+          "timestamp": 1665106662336,
+          "cantidad": 40
+        },
+        "id": 6
+      },
+      {
+        "1": {
+          "nombre": "Regla",
+          "descripcion": 125.53,
+          "codigo": 25233,
+          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+          "precio": 125.53,
+          "stock": 49760,
+          "id": 1,
+          "timestamp": 1665106662948,
+          "cantidad": 40
+        },
+        "id": 7
+      },
+      {
+        "1": {
+          "nombre": "Regla",
+          "descripcion": 125.53,
+          "codigo": 25233,
+          "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
+          "precio": 125.53,
+          "stock": 49740,
+          "id": 1,
+          "timestamp": 1665106663514,
+          "cantidad": 40
+        },
+        "id": 8
+      }
     ]
   ]
 ]

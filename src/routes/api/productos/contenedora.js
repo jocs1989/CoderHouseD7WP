@@ -51,7 +51,7 @@ class Contenedora {
   }
   async getById(id) {
     try {
-      console.log('papap'+id)
+      
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
       this.busqueda = this.datos.find((object) => {

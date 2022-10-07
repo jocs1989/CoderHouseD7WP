@@ -13,6 +13,7 @@ class Carrito {                               constructor() {
 }
 async setNewCar(id, cantidad) {
   try {
+    
     const object = await this.articulos.getById(id);
     const precio = Number(object.precio);
     const stock = Number(object.stock);
@@ -54,6 +55,7 @@ async setAddProductCar(idCarrito,idArticulo, cantidad) {
     const precio = Number(object.precio);    
     const stock = Number(object.stock);
     const carritoViejo=await this.getAllCar(idCarrito);
+   
     if (Number(object.stock) >= cantidad) {
       this.total = this.total + cantidad * precio;
       object.stock = stock - cantidad;
@@ -61,19 +63,22 @@ async setAddProductCar(idCarrito,idArticulo, cantidad) {
       object.cantidad = cantidad;
       if (this.contenedor[object.id] === undefined) {
         this.contenedor[Number(object.id)] = object;
+        carritoViejo[Number(object.id)] = object;
       } else {
 
         let cantidadVieja = object.cantidad;
         object.cantidad=cantidadVieja+cantidad;
         this.contenedor[Number(object.id)].cantidad = cantidadVieja + cantidad;
         this.contenedor[Number(object.id)] =object;
+        carritoViejo[Number(object.id)].cantidad = cantidadVieja + cantidad;
+        carritoViejo[Number(object.id)] =object;
       }      
       this.productos++;
       this.contenedor.id=idCarrito      
       
       const resultado=todoProductos.filter(object=>{
         if(object.id===idCarrito){
-          return this.contenedor
+          return carritoViejo
         }else {
           return object
         }

@@ -16,9 +16,11 @@ router.use(express.json());
 
 router.post("/", async (req, res) => {
   try {
-    const id = req.body.id;
+   
+    
+    const idArticulo=req.body.idArticulo;
     const cantidad = req.body.cantidad;
-    const valores = await carrito.setNewCar(id, cantidad);
+    const valores = await carrito.setNewCar(idArticulo, cantidad);
     res.status(200).json(valores);
     //res.status(200).render('partials/producto',{articulo: await articulos.save(producto)})
   } catch (err) {
@@ -66,13 +68,13 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.put("/:id/productos", async (req, res) => {
+router.post("/:id/productos", async (req, res) => {
   try {
     
     const idCarrito= req.params.id;
     const idArticulo=req.body.idArticulo;
     const cantidad=req.body.cantidad;
-    console.log('aaa'+idArticulo);
+    
     const producto= await carrito.setAddProductCar(idCarrito,idArticulo, cantidad);
     res.status(200).json(producto);
   } catch (err) {
