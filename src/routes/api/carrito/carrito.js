@@ -1,7 +1,11 @@
+import { promises as fsPromises, readFileSync, writeFileSync } from "fs";
+
 import Carritos from "./carritos.js";
 import Contenedora from "../productos/contenedora.js";
 import { fileURLToPath } from 'url';
+import { isNumberObject } from "util/types";
 import path from 'path';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 class Carrito {                               constructor() {
@@ -38,7 +42,7 @@ async setNewCar(id, cantidad) {
       
       this.productos++;
       console.log(this.contenedor);
-
+    
       return await this.carritos.save(this.contenedor);
     } else {
       console.log("lo sentimos no hay stock");
@@ -55,36 +59,47 @@ async setAddProductCar(idCarrito,idArticulo, cantidad) {
     const precio = Number(object.precio);    
     const stock = Number(object.stock);
     const carritoViejo=await this.getAllCar(idCarrito);
+
+  
    
     if (Number(object.stock) >= cantidad) {
       this.total = this.total + cantidad * precio;
       object.stock = stock - cantidad;
       await this.articulos.updateById(object);      
       object.cantidad = cantidad;
-      if (this.contenedor[object.id] === undefined) {
-        this.contenedor[Number(object.id)] = object;
+      if (carritoViejo[object.id] === undefined) {
+        //this.contenedor[Number(object.id)] = object;
         carritoViejo[Number(object.id)] = object;
       } else {
 
         let cantidadVieja = object.cantidad;
         object.cantidad=cantidadVieja+cantidad;
-        this.contenedor[Number(object.id)].cantidad = cantidadVieja + cantidad;
-        this.contenedor[Number(object.id)] =object;
+        //this.contenedor[Number(object.id)].cantidad = cantidadVieja + cantidad;
+        //this.contenedor[Number(object.id)] =object;
         carritoViejo[Number(object.id)].cantidad = cantidadVieja + cantidad;
         carritoViejo[Number(object.id)] =object;
       }      
       this.productos++;
-      this.contenedor.id=idCarrito      
-      
-      const resultado=todoProductos.filter(object=>{
-        if(object.id===idCarrito){
-          return carritoViejo
-        }else {
-          return object
-        }
-      })
-      await this.carritos.save(resultado);      
-      return this.contenedor
+      //this.contenedor.id=idCarrito      
+    
+      for (let i in todoProductos){
+       
+          if(Number(todoProductos[i].id)===Number(idCarrito))
+          {
+            carritoViejo.id=Number(idCarrito)
+            todoProductos[i]=carritoViejo
+            console.log(todoProductos[i])
+          }
+        
+        
+          
+        
+      }
+        
+     
+
+      this.carritos.saveAdd(todoProductos);      
+      return carritoViejo
     } else {
       console.log("lo sentimos no hay stock");
     }

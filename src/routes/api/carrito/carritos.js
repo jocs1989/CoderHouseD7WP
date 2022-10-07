@@ -20,7 +20,19 @@ class Contenedora {
       return object;
     }
   }
-
+  async saveAdd(datos) {
+    try {
+      
+      console.log('Entro')
+      
+      writeFileSync(this.nombre, JSON.stringify(datos, null, 2));
+      
+    } catch (err) {
+      
+      writeFileSync(this.nombre, JSON.stringify([], null, 2));
+      
+    }
+  }
   async updateById(producto) {
     try {
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
