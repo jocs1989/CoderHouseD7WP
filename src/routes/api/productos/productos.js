@@ -38,7 +38,8 @@ router.get("/", async (req, res) => {
 //GET '/api/productos/:id' -> devuelve un producto según su id.
 router.get("/:id", async (req, res) => {
   try {
-    const { id } = req.params;
+    const  id = Number(req.params.id);
+    
    
     let result = await articulos.getById(id);
     if (result === null) {
@@ -64,9 +65,9 @@ router.post("/", isAdmin,async (req, res) => {
     const codigo=req.body.codigo;
     const url=req.body.url;
     const precio=req.body.precio;
-    const stock=req.body.stock;  
+    const stock=Number(req.body.stock);  
     const producto = {nombre,descripcion,codigo,url,precio,stock} ; 
-    console.log(producto)  
+     
     const valores = await articulos.save(producto)
    
      
@@ -98,7 +99,8 @@ router.put("/:id",isAdmin, async (req, res) => {
 //DELETE '/api/productos/:id' -> elimina un producto según su id.
 router.delete("/:id",isAdmin, async (req, res) => {
   try {
-    res.status(200).json(await articulos.deleteById(req.params.id));
+    const id =Number(req.params.id)
+    res.status(200).json(await articulos.deleteById(id));
   } catch (err) {
     console.error( err);
     res.status(400).json({ error: "datos incorrectos" });

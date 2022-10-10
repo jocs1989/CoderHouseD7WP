@@ -12,6 +12,16 @@ const articulos = new Contenedora(__dirname+'../productos/articulos.txt')
 const datosAgregados = {};
 
 //GET '/api/productos' -> devuelve todos los productos.
+function isAdmin(req, res, next) {
+  if (req.body.administrador) {
+    next();
+  } else {
+    res.status(403).json({
+      error: `-1,descripcion:  ruta ${req.url} método ${req.method}  no autorizada`,
+    });
+  }
+}
+
 router.use(express.json());
 
 router.post("/", async (req, res) => {
@@ -42,7 +52,7 @@ router.delete("/:id", async (req, res) => {
 //GET '/api/productos/:id' -> devuelve un producto según su id.
 router.get("/:id/productos", async (req, res) => {
   try {
-    const { id } = req.params;   
+    const { id } = Number(req.params);   
     let result = await carrito.getAllCar(id);
     if (result === null) {
       throw new Error("No Existe el producto");

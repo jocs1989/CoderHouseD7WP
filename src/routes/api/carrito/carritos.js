@@ -63,7 +63,7 @@ class Contenedora {
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
       this.busqueda = this.datos.find((object) => {
-        if (object.id == id) {
+        if (Number(object.id) === id) {
           return object;
         }
       });
@@ -127,17 +127,20 @@ class Contenedora {
       this.datos = [...JSON.parse(archivo)];
       
       let sinEliminar = this.datos.filter((object) => {
-        if (id !== object.id) {
+        if (Number(id) !== Number(object.id)) {
           return object;
         }
       });
 
-      let eliminado = this.datos.filter((object) => {
-        if (id == object.id) {
+      let eliminado = this.datos.find((object) => {
+        if (Number(id) === Number(object.id)) {
           return object;
         }
       });
+      console.log('Que hay en eliminado',eliminado)
+      
       if (eliminado === undefined) {
+        throw new Error('No existe el dato');
       } else {       
         writeFileSync(this.nombre, JSON.stringify(sinEliminar, null, 2));
         return eliminado[0];
