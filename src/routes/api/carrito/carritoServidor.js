@@ -84,8 +84,8 @@ router.post("/:id/productos", async (req, res) => {
 router.delete("/:id/productos/:id_prod", async (req, res) => {
   try {
     
-    const idCarrito= req.params.id;
-    const idArticulo=req.params.id_prod;
+    const idCarrito= Number(req.params.id);
+    const idArticulo=Number(req.params.id_prod);
     
     
     const producto= await carrito.setDellProductCar(idCarrito,idArticulo);

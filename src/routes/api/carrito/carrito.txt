@@ -1,15 +1,15 @@
 [
   {
-    "2": {
-      "nombre": "Escuadra",
+    "4": {
+      "nombre": "Regla",
       "descripcion": 125.53,
       "codigo": 25233,
       "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
       "precio": 125.53,
-      "stock": 1921,
-      "id": 2,
-      "timestamp": 1665184641018,
-      "cantidad": 47
+      "stock": 45,
+      "id": 4,
+      "timestamp": 1665494714021,
+      "cantidad": 2
     },
     "id": 4
   }

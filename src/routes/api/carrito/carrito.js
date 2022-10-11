@@ -71,7 +71,8 @@ async setNewCar(id, cantidad) {
 async setAddProductCar(idCarrito,idArticulo, cantidad) {
   try {
     const todoProductos= await this.carritos.getAll();
-    const object = await this.articulos.getById(idArticulo);    
+    const object = await this.articulos.getById(idArticulo);
+    console.log(typeof object)    
     const precio = Number(object.precio);    
     const stock = Number(object.stock);
     const carritoViejo=await this.getAllCar(idCarrito);
@@ -126,10 +127,12 @@ async setAddProductCar(idCarrito,idArticulo, cantidad) {
 async setDellProductCar(idCarrito,idArticulo) {
   try {
     const todoProductos= await this.carritos.getAll();
-    const object = await this.articulos.getById(idArticulo);    
+    const object = await this.articulos.getById(Number(idArticulo)); 
+   
+
     const precio = Number(object.precio);    
     const stock = Number(object.stock);
-    const carritoViejo=await this.getAllCar(idCarrito);
+    const carritoViejo=await this.getAllCar(Number(idCarrito));
     const cantidad=carritoViejo[idArticulo].cantidad
     
       this.total = this.total - cantidad * precio;
@@ -141,7 +144,7 @@ async setDellProductCar(idCarrito,idArticulo) {
 
         
         delete carritoViejo[Number(object.id)] 
-      }      
+      }    
       this.productos++;
       //this.contenedor.id=idCarrito      
     
@@ -165,7 +168,7 @@ async setDellProductCar(idCarrito,idArticulo) {
       return carritoViejo
     
   } catch (err) {
-    console.log(err);
+    throw new Error(err);
   }
 }
 

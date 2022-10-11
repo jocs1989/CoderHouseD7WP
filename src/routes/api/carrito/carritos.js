@@ -63,7 +63,7 @@ class Contenedora {
       const archivo = await fsPromises.readFile(this.nombre, "utf-8");
       this.datos = [...JSON.parse(archivo)];
       this.busqueda = this.datos.find((object) => {
-        if (Number(object.id) === id) {
+        if (Number(object.id) === Number(id)) {
           return object;
         }
       });

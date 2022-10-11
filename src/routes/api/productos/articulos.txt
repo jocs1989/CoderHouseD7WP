@@ -5,8 +5,8 @@
     "codigo": 25233,
     "url": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png",
     "precio": 125.53,
-    "stock": 0,
+    "stock": 45,
     "id": 4,
-    "timestamp": 1665171780101
+    "timestamp": 1665494952879
   }
 ]

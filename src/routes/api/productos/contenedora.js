@@ -60,9 +60,12 @@ class Contenedora {
           return object;
         }
       });
-     
+      if(this.busqueda === undefined ){
+        console.log('Entro')
+        throw new Error('No existe el producto')
+       }
 
-      return this.busqueda === undefined ? null : this.busqueda;
+      return  this.busqueda;
     } catch (err) {      
       throw new Error(err);
     }
